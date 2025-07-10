@@ -33,7 +33,7 @@
             background-color: var(--background);
         }
 
-        /* Navigation */
+            /* Navigation */
         .navbar {
             position: fixed;
             top: 0;
@@ -48,18 +48,32 @@
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+                width: 100%;
+                padding-left: 3rem; 
+                padding-right: 4rem;     
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+        .logo-section {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 10px; /* spacing between logo and name */
         }
 
-        .logo {
+        .logo-img {
+            width: 60px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary-text);
+            font-family: 'Poppins', sans-serif;
         }
 
         .nav-menu {
@@ -108,6 +122,7 @@
             margin: 3px 0;
             transition: 0.3s;
         }
+
 
         /* Hero Section */
         .hero {
@@ -212,7 +227,7 @@
             border-radius: 2px;
         }
 
-        /* About Section */
+                /* About Section */ 
         .about-content {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -227,8 +242,8 @@
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--accent-color);
@@ -237,26 +252,6 @@
         }
 
         .profile-image:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .profile-placeholder {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-color), var(--hover-accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--background);
-            border: 4px solid var(--accent-color);
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .profile-placeholder:hover {
             transform: scale(1.05);
             box-shadow: var(--shadow-hover);
         }
@@ -304,6 +299,7 @@
             color: var(--secondary-text);
             font-size: 0.9rem;
         }
+
 
         /* Skills Section */
         .skills-container {
@@ -1055,35 +1051,41 @@
     </style>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Dhiraj Jadhav</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#academics" class="nav-link">Academics</a></li>
-                <li><a href="#skills" class="nav-link">Technical Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="nav-container">
+        <div class="logo-section">
+        <img src="Dhiraj-Logo.png" alt="DJ Logo" class="logo-img">
+        <span class="logo-text">Dhiraj Jadhav</span>
         </div>
+        <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#academics" class="nav-link">Academics</a></li>
+        <li><a href="#skills" class="nav-link">Technical Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </div>
     </nav>
+
+
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Dhiraj Jadhav</h1>
-            <div class="subtitle">Cybersecurity & Software Engineer</div>
-            <p>Computer Science Engineering student with expertise in cybersecurity, machine learning, and full-stack development. Passionate about building secure and innovative solutions.</p>
+            <div class="subtitle"> Cybersecurity Enthusiast & Python Developer</div>
+            <p>Cybersecurity Enthusiast & Python Developer with a strong interest in ethical hacking, scripting, and secure application development. I specialize in using Python for automation and cybersecurity tools, and have hands-on experience in penetration testing, vulnerability analysis, and full-stack projects. Passionate about building secure, scalable solutions and continuously exploring new technologies to stay ahead in the cybersecurity landscape.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#" class="btn btn-outline" id="downloadResume">Download Resume</a>
@@ -1091,54 +1093,44 @@
         </div>
     </section>
 
-     <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <!-- TO ADD YOUR PROFILE IMAGE:
-                     1. Save your image as 300x300px in .jpg or .png format
-                     2. Upload it to your project folder or GitHub
-                     3. Uncomment the line below and replace 'your-profile-image.jpg' with your actual image path
-                     4. Comment out or delete the placeholder div below -->
-                
-                <!-- <img src="your-profile-image.jpg" alt="Dhiraj Jadhav" class="profile-image"> -->
-                
-                <!-- Placeholder until you add your image -->
-                <div class="profile-placeholder">
-                    <i class="fas fa-user"></i>
-                </div>
+   <!-- About Section --> 
+<section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+        <div class="about-image">
+            <img src="Dhiraj-Profile.jpg" alt="Profile Image" class="profile-image">
+        </div>
+        
+        <div class="about-info">
+            <div class="about-text">
+                <h3>Computer Science Engineering Student</h3>
+                <p>I'm currently pursuing my Bachelor's in Computer Science Engineering at Sandip University, Nashik. My journey in technology is driven by a passion for cybersecurity and software development.</p>
+                <p>As a self-led cybersecurity intern, I've completed over 20 rooms on TryHackMe, mastering tools like Nmap, Wireshark, and Burp Suite. I've also developed machine learning projects and participated in multiple hackathons, securing top positions.</p>
+                <p>My goal is to become a skilled cybersecurity professional while continuing to build innovative software solutions that make a positive impact.</p>
             </div>
             
-            <div class="about-info">
-                <div class="about-text">
-                    <h3>Computer Science Engineering Student</h3>
-                    <p>I'm currently pursuing my Bachelor's in Computer Science Engineering at Sandip University, Nashik. My journey in technology is driven by a passion for cybersecurity and software development.</p>
-                    <p>As a self-led cybersecurity intern, I've completed over 20 rooms on TryHackMe, mastering tools like Nmap, Wireshark, and Burp Suite. I've also developed machine learning projects and participated in multiple hackathons, securing top positions.</p>
-                    <p>My goal is to become a skilled cybersecurity professional while continuing to build innovative software solutions that make a positive impact.</p>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">TryHackMe Rooms</div>
                 </div>
-                
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">20+</div>
-                        <div class="stat-label">TryHackMe Rooms</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Major Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Hackathons</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2027</div>
-                        <div class="stat-label">Expected Graduation</div>
-                    </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Major Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Hackathons</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2027</div>
+                    <div class="stat-label">Expected Graduation</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Education Section -->
 <section id="academics" class="section">
@@ -1147,11 +1139,12 @@
         <div class="project-card">
             <div class="project-header">
                 <div class="project-title">B.Tech in Computer Science Engineering</div>
-                <div class="project-period">Sandip University, Nashik | 2021 – 2025</div>
+                <div class="project-period">Sandip University, Nashik | 2023 – 2027</div>
             </div>
             <div class="project-body">
                 <div class="project-description">
                     Currently pursuing Bachelor's degree with a strong focus on cybersecurity, programming, and real-world project building. Engaged in hands-on labs, certifications, and research-based learning.
+                    <br><strong>1st Year CGPA:</strong> 7.79 <br><strong>2nd Year CGPA:</strong> 8.19 <br><strong>3rd Year CGPA:</strong> N.A
                 </div>
                 <div class="project-tech">
                     <span class="tech-tag">Cybersecurity</span>
@@ -1163,30 +1156,33 @@
         </div>
 
         <div class="project-card">
-            <div class="project-header">
-                <div class="project-title">Senior Secondary (12th), Science Stream</div>
-                <div class="project-period">XYZ Junior College | 2019 – 2021</div>
+        <div class="project-header">
+            <div class="project-title">Higher Secondary Education (11th & 12th), Science Stream</div>
+            <div class="project-period">J.D. Hiray Jr. College of Science | 2021 – 2023</div>
+        </div>
+        <div class="project-body">
+            <div class="project-description">
+            Completed 11th & 12th grades under Maharashtra State Board with core subjects: Physics, Chemistry, and Mathematics (PCM). Developed strong foundation in analytical thinking and scientific reasoning.
+            <br><strong>11th Percentage:</strong> 82.00% <br><strong>12th Percentage:</strong> 75.60%
             </div>
-            <div class="project-body">
-                <div class="project-description">
-                    Completed 12th grade under Maharashtra State Board with Physics, Chemistry, and Mathematics. Built foundational understanding in science and problem-solving.
-                </div>
-                <div class="project-tech">
-                    <span class="tech-tag">PCM</span>
-                    <span class="tech-tag">HSC</span>
-                    <span class="tech-tag">Maharashtra Board</span>
-                </div>
+            <div class="project-tech">
+            <span class="tech-tag">PCM</span>
+            <span class="tech-tag">HSC</span>
+            <span class="tech-tag">Maharashtra Board</span>
             </div>
         </div>
+        </div>
+
 
         <div class="project-card">
             <div class="project-header">
                 <div class="project-title">Secondary School (10th)</div>
-                <div class="project-period">ABC High School | 2018 – 2019</div>
+                <div class="project-period">K.B.L Jadhav High School | 2020 – 2021</div>
             </div>
             <div class="project-body">
                 <div class="project-description">
                     Completed SSC from Maharashtra State Board with strong academic performance and interest in computers, science, and logic.
+                    <br><strong>10th Percentage:</strong> 87.80%
                 </div>
                 <div class="project-tech">
                     <span class="tech-tag">SSC</span>
@@ -1472,7 +1468,7 @@
 
             <div class="achievement-card">
                 <div class="achievement-header">
-                    <div class="achievement-rank">Academic</div>
+                    <div class="achievement-rank">Cybersecurity</div>
                     <div class="achievement-title">Cybersecurity Excellence</div>
                     <div class="achievement-event">Self-Led Learning</div>
                 </div>
@@ -1544,16 +1540,13 @@
                     </div>
                     <div class="contact-details">
                         <h4>TryHackMe</h4>
-                        <a href="#" target="_blank">TryHackMe Profile</a>
+                        <a href="https://tryhackme.com/p/jdhiraj462" target="_blank">tryhackme.com/jdhiraj462</a>
                     </div>
                 </div>
             </div>
 
             <form class="contact-form" id="contactForm">
-                <!-- TO RECEIVE EMAILS: Replace 'jdhiraj462@gmail.com' with your actual email address in:
-                     1. The JavaScript code (search for 'jdhiraj462@gmail.com')
-                     2. The email contact info above
-                     The form will automatically open the user's email client with your message -->
+               
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -1585,8 +1578,8 @@
             <a href="https://github.com/dhirajadhav98" class="social-link" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="#" class="social-link" target="_blank">
-                <i class="fas fa-flag"></i>
+            <a href="https://instagram.com/thetraveller.jd" class="social-link" target="_blank">
+                <i class="fas fa-instagram"></i>
             </a>
             <a href="tel:+917378720856" class="social-link">
                 <i class="fas fa-phone"></i>
