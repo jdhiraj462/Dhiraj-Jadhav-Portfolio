@@ -353,77 +353,104 @@
             border-color: var(--accent-color);
         }
 
-        /* Certifications Section */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
+       /* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
 
-        .certification-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
+.certification-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
 
-        .certification-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
 
-        .cert-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--accent-color), var(--hover-accent));
-            color: var(--background);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 1.5rem;
-        }
+.cert-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-color), var(--hover-accent));
+    color: var(--background);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+}
 
-        .cert-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--primary-text);
-            margin-bottom: 0.5rem;
-        }
+.cert-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+}
 
-        .cert-issuer {
-            color: var(--accent-color);
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
+.cert-issuer {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
 
-        .cert-date {
-            color: var(--secondary-text);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
+.cert-date {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
 
-        .cert-description {
-            color: var(--secondary-text);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
+.cert-description {
+    color: var(--secondary-text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
 
-        .cert-badge {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--background);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+.cert-badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.verify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* icon aur text ke beech gap */
+    margin-top: 12px;
+    background: linear-gradient(135deg, var(--accent-color), var(--hover-accent));
+    color: var(--background);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.verify-btn i {
+    font-size: 1rem;
+}
+
+.verify-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
 
         /* Achievements Section */
         .achievements-grid {
@@ -1396,7 +1423,7 @@
         <div class="project-card">
             <div class="project-header">
                 <div class="project-title">Safar Setu</div>
-                <div class="project-period">Mar 2025 – Tech Udaan Hackathon (2nd Place)</div>
+                <div class="project-period">Mar 2025 – Tech Udaan Hackathon (3rd Place)</div>
             </div>
             <div class="project-body">
                 <div class="project-description">
@@ -1517,43 +1544,63 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-        <h2 class="section-title">Certifications</h2>
-        <div class="certifications-grid">
-            <div class="certification-card">
-                <div class="cert-icon">
-                    <i class="fab fa-google"></i>
-                </div>
-                <div class="cert-title">Google Cybersecurity Professional Certificate</div>
-                <div class="cert-issuer">Google via Coursera</div>
-                <div class="cert-date">2025</div>
-                <div class="cert-description">
-                    Comprehensive cybersecurity program covering security frameworks, network security, incident response, and security tools. Gained hands-on experience with industry-standard practices.
-                </div>
-                <div class="cert-badge">Professional Certificate</div>
+<!-- Certifications Section -->
+<section id="certifications" class="section">
+    <h2 class="section-title">Certifications</h2>
+    <div class="certifications-grid">
+        <div class="certification-card">
+            <div class="cert-icon">
+                <i class="fab fa-google"></i>
+            </div>
+            <div class="cert-title">Google Cybersecurity Professional Certificate</div>
+            <div class="cert-issuer">Google via Coursera</div>
+            <div class="cert-date">2025</div>
+            <div class="cert-description">
+                Comprehensive cybersecurity program covering security frameworks, network security, incident response, and security tools. Gained hands-on experience with industry-standard practices.
+            </div>
+            <div class="cert-badge">Professional Certificate</div>
+            <a href="https://your-verification-link.com" target="_blank" class="verify-btn">
+              <i class="fas fa-check-circle"></i> Verify</a>
             </div>
 
-            <div class="certification-card">
-                <div class="cert-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-               <div class="cert-title">Deloitte Australia Cyber Job Simulation</div>
-                <div class="cert-issuer">Forage Platform</div>
-                <div class="cert-date">Aug 2025</div>
-                <div class="cert-description">
-                    Completed a job simulation involving reading and analyzing web activity logs, supporting a client in a simulated cyber security breach, and answering scenario-based questions on suspicious activity.
-                </div>
-                <div class="cert-badge">Simulation Completed</div>
-                </div>
+             <div class="certification-card">
+    <div class="cert-icon">
+        <i class="fas fa-brain"></i>
+    </div>
+    <div class="cert-title">OCI 2025 AI Foundations Associate (Oracle)</div>
+    <div class="cert-issuer">Oracle</div>
+    <div class="cert-date">Aug 2025</div>
+    <div class="cert-description">
+        Gained foundational knowledge of AI, ML, and Deep Learning. 
+Explored supervised & unsupervised learning, Generative AI, and OCI AI services 
+to strengthen application of AI/ML in cloud solutions.
 
-            <div class="certification-card">
+    </div>
+    <div class="cert-badge">Certification Earned</div>
+    <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=8E646DF2F062B1CF14226371E0E0A1AC9B26F808FE8A32BD7DCE1DE4FBA3EF3C" target="_blank" class="verify-btn">
+        <i class="fas fa-check-circle"></i> Verify </a>
+</div>
+
+        <div class="certification-card">
+            <div class="cert-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cert-title">Deloitte Australia Cyber Job Simulation</div>
+            <div class="cert-issuer">Forage Platform</div>
+            <div class="cert-date">Aug 2025</div>
+            <div class="cert-description">
+                Completed a job simulation involving reading and analyzing web activity logs, supporting a client in a simulated cyber security breach, and answering scenario-based questions on suspicious activity.
+            </div>
+            <div class="cert-badge">Simulation Completed</div>
+            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_rzeWZENjpw6gb9WoC_1756033329879_completion_certificate.pdf" target="_blank" class="verify-btn">
+              <i class="fas fa-check-circle"></i> Verify</a>
+        </div>
+
+        <div class="certification-card">
             <div class="cert-icon">
                 <i class="fas fa-user-shield"></i>
             </div>
-            <div class="cert-title">
-                Tata Security Analyst Job Simulation
-            </div>
+            <div class="cert-title">Tata Security Analyst Job Simulation</div>
             <div class="cert-issuer">Forage Platform</div>
             <div class="cert-date">Aug 2025</div>
             <div class="cert-description">
@@ -1562,9 +1609,32 @@
                 Delivered reports and presentations on technical findings.
             </div>
             <div class="cert-badge">Simulation Completed</div>
+             <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_rzeWZENjpw6gb9WoC_1756047852251_completion_certificate.pdf" target="_blank" class="verify-btn">
+              <i class="fas fa-check-circle"></i> Verify</a>
+        </div>
+      
+
+        <div class="certification-card">
+            <div class="cert-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="cert-title">Tata Group Data Analytics Job Simulation</div>
+            <div class="cert-issuer">Forage Platform</div>
+            <div class="cert-date">Aug 2025</div>
+            <div class="cert-description">
+                Completed a simulation with Tata iQ's Financial Services team. 
+                Performed EDA using GenAI tools, proposed a no-code predictive modeling framework, 
+                and designed an AI-driven collections strategy with focus on compliance and ethical AI.  </div>
+            <div class="cert-badge">Simulation Completed</div>
+            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_rzeWZENjpw6gb9WoC_1756234065565_completion_certificate.pdf" target="_blank" class="verify-btn">
+                <i class="fas fa-check-circle"></i> Verify
+            </a>
         </div>
 
-    </section>
+            </div>
+            
+        </section>
+
 
     <!-- Achievements Section -->
     <section id="achievements" class="section">
